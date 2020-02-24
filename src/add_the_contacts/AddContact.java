@@ -1,20 +1,12 @@
 package add_the_contacts;
 
-import checking_the_input.ValidateInput;
+import checking_the_input.CheckInput;
 import person_class.Person;
 import java.util.Scanner;
 
 public class AddContact {
     Person ob = new Person();
-    ValidateInput ob1 = new ValidateInput();
-
-    public void addFirstName(String fn) {
-        ob.setFirstName(fn);
-    }
-
-    public void addLastName(String ln) {
-        ob.setLastName(ln);
-    }
+    CheckInput ob1 = new CheckInput();
 
     public boolean addNumber(String number) {
         if (ob1.phoneNumber(number)) {
@@ -36,9 +28,9 @@ public class AddContact {
         Scanner sc = new Scanner(System.in);
         System.out.println("You have chosen to add a new contact:\nPlease enter the name of the Person");
         System.out.print("First Name: ");
-        addFirstName(sc.nextLine());
+        ob.setFirstName(sc.nextLine());
         System.out.print("Last Name: ");
-        addLastName(sc.nextLine());
+        ob.setLastName(sc.nextLine());
         boolean a = true;
         while (a) {
             System.out.print("Contact Number: ");
