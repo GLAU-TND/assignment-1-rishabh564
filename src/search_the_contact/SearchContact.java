@@ -2,19 +2,20 @@ package search_the_contact;
 
 import person_class.Person;
 import view_the_contact.ViewContact;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class SearchContact {
     public void searchContact(ArrayList<Person> ob) {
-        System.out.println("You could search for a contact from their first names:");
+        System.out.println("Enter the first name of a person for searching-");
         Scanner sc = new Scanner(System.in);
         String searchName = sc.nextLine();
         int count = 0;
         ArrayList<Integer> ar = new ArrayList<>();
         int i = 0;
-        for (Person oj : ob) {
-            if (oj.getFirstName().equals(searchName)) {
+        for (Person p : ob) {
+            if (p.getFirstName().equals(searchName)) {
                 ar.add(i);
                 count++;
             }
@@ -32,3 +33,5 @@ public class SearchContact {
 
     }
 }
+
+

@@ -1,6 +1,7 @@
 package delete_the_contacts;
 
 import person_class.Person;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -9,12 +10,17 @@ public class DeleteContact {
         Scanner sc = new Scanner(System.in);
         int i = 1;
         System.out.println("Here are all your contacts: ");
-        for (Person oj : ob) {
-            System.out.println(i++ + ". " + oj.getFirstName() + " " + oj.getLastName());
+
+        for (Person p : ob) {
+            System.out.println(i++ + ". " + p.getFirstName() + " " + p.getLastName());
         }
-        System.out.println("Press the number against the contact to delete it: ");
-        int sno = sc.nextInt() - 1;
-        return sno;
+        System.out.println("Press the number which is displayed in front of the contact to delete it: ");
+        int no = sc.nextInt() - 1;
+        return no;
 
     }
 }
+
+
+
+
